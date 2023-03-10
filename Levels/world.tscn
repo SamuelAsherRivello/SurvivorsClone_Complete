@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://q112xmiowe1g"]
+[gd_scene load_steps=23 format=3 uid="uid://q112xmiowe1g"]
 
 [ext_resource type="Texture2D" uid="uid://bfdbcrpp4xqvr" path="res://Textures/dirt_full_new.png" id="1_lxphy"]
 [ext_resource type="PackedScene" uid="uid://18hqgfsg3qdu" path="res://Player/player.tscn" id="2_pxlo2"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dqb4uy8dkypuo" path="res://Enemies/enemy_super.tscn" id="9_dvrmr"]
 [ext_resource type="AudioStream" uid="uid://mnixawxbbkjj" path="res://Audio/Music/battleThemeA.mp3" id="10_ld47h"]
 [ext_resource type="Script" path="res://Audio/Music/snd_Music.gd" id="11_b7q2b"]
+[ext_resource type="Script" path="res://SamR/QuitKeyController.gd" id="12_7qior"]
 
 [sub_resource type="Resource" id="Resource_3md2h"]
 script = ExtResource("5_qo4sy")
@@ -104,7 +105,7 @@ region_rect = Rect2(-2000, -2000, 2000, 2000)
 [node name="Player" parent="." instance=ExtResource("2_pxlo2")]
 
 [node name="Enemy_spawner" parent="." instance=ExtResource("3_mhwjb")]
-spawns = [SubResource("Resource_3md2h"), SubResource("Resource_7bl3d"), SubResource("Resource_h33tw"), SubResource("Resource_8nqwx"), SubResource("Resource_l56mg"), SubResource("Resource_ylsrh"), SubResource("Resource_itr5w"), SubResource("Resource_8hurr"), SubResource("Resource_bby5c"), SubResource("Resource_3savt")]
+spawns = Array[ExtResource("5_qo4sy")]([SubResource("Resource_3md2h"), SubResource("Resource_7bl3d"), SubResource("Resource_h33tw"), SubResource("Resource_8nqwx"), SubResource("Resource_l56mg"), SubResource("Resource_ylsrh"), SubResource("Resource_itr5w"), SubResource("Resource_8hurr"), SubResource("Resource_bby5c"), SubResource("Resource_3savt")])
 
 [node name="Loot" type="Node2D" parent="." groups=["loot"]]
 
@@ -114,5 +115,8 @@ stream = ExtResource("10_ld47h")
 volume_db = -15.0
 autoplay = true
 script = ExtResource("11_b7q2b")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("12_7qior")
 
 [connection signal="playerdeath" from="Player" to="snd_Music" method="_on_player_playerdeath"]

@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/cyclops_new.png-23e92d4eddf4fa96d3b5d370f2a0c
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
