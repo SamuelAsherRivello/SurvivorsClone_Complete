@@ -10,12 +10,13 @@
 
 ## How to use
 
-This is a demo game for educational use while learning the [Godot](https://godotengine.org/) game engine.
+This is a demo game for educational use while learning the Godot game engine.
 
-## Install
-
-Tbd...
-
+**Getting Started**
+1. Download this repo (*.zip or *.git)
+1. Download the [Godot](https://godotengine.org/) game engine
+1. Open the (`./Godot/`) folder in the repo within the Godot Engine 
+1. Enjoy
 
 
 Created By
