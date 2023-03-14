@@ -30,11 +30,3 @@ Contact
 - Source Code on Git - <a href="https://github.com/SamuelAsherRivello/">Github.com/SamuelAsherRivello</a>
 - LinkedIn - <a href="https://Linkedin.com/in/SamuelAsherRivello">Linkedin.com/in/SamuelAsherRivello</a> <--- Say Hello! :)
 
-License
-=============
-
-Provided as-is under MIT License | Copyright © 2023 Rivello Multimedia Consulting, LLC
-
-
-
-
