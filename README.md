@@ -2,14 +2,6 @@
 
 # Godot Vampire Survivors Clone
 
-- [How To Use](#how-to-use)
-- [Install](#install)
-
-
-<!-- toc -->
-
-## How to use
-
 This is a demo game for educational use while learning the Godot game engine.
 
 **Getting Started**
