@@ -1,11 +1,12 @@
-extends Control
+extends SceneBase
 
+@export var GameScene : PackedScene
 
-var level = "res://Scenes/Scene02_Game.tscn"
-
+func _ready():
+	pass
 
 func _on_btn_play_click_end():
-	var _level = get_tree().change_scene_to_file(level)
+	get_tree().change_scene_to_file(GameScene.resource_path)
 
 
 func _on_btn_exit_click_end():

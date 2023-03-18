@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://dy3ssv6llosvu"]
 
 [ext_resource type="Script" path="res://Prefabs/Objects/experience_gem.gd" id="1_iekc4"]
 [ext_resource type="Texture2D" uid="uid://dxlo5rot6mufb" path="res://Art/Textures/Items/Gems/Gem_green.png" id="2_5v8ip"]

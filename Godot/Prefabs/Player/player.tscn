@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c57igktpxwnv4"]
+[gd_scene load_steps=19 format=3]
 
 [ext_resource type="Script" path="res://Prefabs/Player/player.gd" id="1_71can"]
 [ext_resource type="Texture2D" uid="uid://b0atek3sapb1u" path="res://Art/Textures/Player/player_sprite.png" id="2_njd5a"]
@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://bs6phjtcylu4m" path="res://Art/Audio/SoundEffect/levelup.ogg" id="9_oqtjg"]
 [ext_resource type="AudioStream" uid="uid://b53fkqsrygq2p" path="res://Art/Audio/SoundEffect/Victory.wav" id="10_5lju1"]
 [ext_resource type="AudioStream" uid="uid://de5cxv5cbes1g" path="res://Art/Audio/SoundEffect/Lose.ogg" id="11_e8vte"]
-[ext_resource type="PackedScene" path="res://Prefabs/Utility/basic_button.tscn" id="12_1uaju"]
+[ext_resource type="PackedScene" path="res://Prefabs/UI/basic_button.tscn" id="12_1uaju"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iu0qq"]
 radius = 5.0

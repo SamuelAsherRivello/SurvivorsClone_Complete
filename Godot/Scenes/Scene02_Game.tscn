@@ -1,7 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://hyfmk7c2q5ud"]
+[gd_scene load_steps=23 format=3 uid="uid://1cqfw7e0es4s"]
 
 [ext_resource type="Texture2D" uid="uid://bfdbcrpp4xqvr" path="res://Art/Textures/dirt_full_new.png" id="1_o8j5l"]
-[ext_resource type="PackedScene" uid="uid://c57igktpxwnv4" path="res://Prefabs/Player/player.tscn" id="2_15mym"]
+[ext_resource type="PackedScene" path="res://Prefabs/Player/player.tscn" id="2_15mym"]
 [ext_resource type="PackedScene" path="res://Prefabs/Utility/enemy_spawner.tscn" id="3_kdoq3"]
 [ext_resource type="PackedScene" path="res://Prefabs/Enemies/enemy_kolbold_weak.tscn" id="4_1l5f2"]
 [ext_resource type="Script" path="res://Prefabs/Utility/spawn.gd" id="5_1fpnw"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" path="res://Prefabs/Enemies/enemy_super.tscn" id="9_472wi"]
 [ext_resource type="AudioStream" uid="uid://mnixawxbbkjj" path="res://Art/Audio/Music/battleThemeA.mp3" id="10_aqvqc"]
 [ext_resource type="Script" path="res://Art/Audio/Music/snd_Music.gd" id="11_bquoj"]
-[ext_resource type="Script" path="res://Scripts/QuitKeyController.gd" id="12_7n67t"]
+[ext_resource type="Script" path="res://Scenes/Scene02_Game.gd" id="12_6nj0x"]
 
 [sub_resource type="Resource" id="Resource_3md2h"]
 script = ExtResource("5_1fpnw")
@@ -93,7 +93,8 @@ enemy = ExtResource("9_472wi")
 enemy_number = 1
 enemy_spawn_delay = null
 
-[node name="World" type="Node2D"]
+[node name="Scene" type="Node2D"]
+script = ExtResource("12_6nj0x")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 2
@@ -103,6 +104,7 @@ region_enabled = true
 region_rect = Rect2(-2000, -2000, 2000, 2000)
 
 [node name="Player" parent="." instance=ExtResource("2_15mym")]
+visible = false
 
 [node name="Enemy_spawner" parent="." instance=ExtResource("3_kdoq3")]
 spawns = Array[ExtResource("5_1fpnw")]([SubResource("Resource_3md2h"), SubResource("Resource_7bl3d"), SubResource("Resource_h33tw"), SubResource("Resource_8nqwx"), SubResource("Resource_l56mg"), SubResource("Resource_ylsrh"), SubResource("Resource_itr5w"), SubResource("Resource_8hurr"), SubResource("Resource_bby5c"), SubResource("Resource_3savt")])
@@ -115,6 +117,3 @@ stream = ExtResource("10_aqvqc")
 volume_db = -15.0
 autoplay = true
 script = ExtResource("11_bquoj")
-
-[node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("12_7n67t")
