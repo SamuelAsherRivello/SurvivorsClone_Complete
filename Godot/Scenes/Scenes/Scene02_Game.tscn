@@ -1,0 +1,118 @@
+[gd_scene load_steps=23 format=3 uid="uid://d2fu2lot8saii"]
+
+[ext_resource type="Script" path="res://Scripts/Scenes/Scene02_Game.gd" id="1_f32j5"]
+[ext_resource type="Texture2D" uid="uid://bfdbcrpp4xqvr" path="res://Art/Textures/dirt_full_new.png" id="1_o8j5l"]
+[ext_resource type="PackedScene" path="res://_Prefabs/Player/player.tscn" id="2_15mym"]
+[ext_resource type="PackedScene" path="res://_Prefabs/Utility/enemy_spawner.tscn" id="3_kdoq3"]
+[ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_kolbold_weak.tscn" id="4_1l5f2"]
+[ext_resource type="Script" path="res://_Prefabs/Utility/spawn.gd" id="5_1fpnw"]
+[ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_kolbold_strong.tscn" id="6_suc4c"]
+[ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_cyclops.tscn" id="7_q7gaq"]
+[ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_juggernaut.tscn" id="8_6b0i3"]
+[ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_super.tscn" id="9_472wi"]
+[ext_resource type="AudioStream" uid="uid://mnixawxbbkjj" path="res://Art/Audio/Music/battleThemeA.mp3" id="10_aqvqc"]
+[ext_resource type="Script" path="res://Art/Audio/Music/snd_Music.gd" id="11_bquoj"]
+
+[sub_resource type="Resource" id="Resource_3md2h"]
+script = ExtResource("5_1fpnw")
+time_start = null
+time_end = 30
+enemy = ExtResource("4_1l5f2")
+enemy_number = 1
+enemy_spawn_delay = 0.0
+
+[sub_resource type="Resource" id="Resource_7bl3d"]
+script = ExtResource("5_1fpnw")
+time_start = 30
+time_end = 90
+enemy = ExtResource("4_1l5f2")
+enemy_number = 2
+enemy_spawn_delay = null
+
+[sub_resource type="Resource" id="Resource_h33tw"]
+script = ExtResource("5_1fpnw")
+time_start = 60
+time_end = 180
+enemy = ExtResource("6_suc4c")
+enemy_number = 1
+enemy_spawn_delay = 1.0
+
+[sub_resource type="Resource" id="Resource_8nqwx"]
+script = ExtResource("5_1fpnw")
+time_start = 90
+time_end = 210
+enemy = ExtResource("4_1l5f2")
+enemy_number = 2
+enemy_spawn_delay = null
+
+[sub_resource type="Resource" id="Resource_l56mg"]
+script = ExtResource("5_1fpnw")
+time_start = 180
+time_end = 210
+enemy = ExtResource("7_q7gaq")
+enemy_number = 1
+enemy_spawn_delay = 2.0
+
+[sub_resource type="Resource" id="Resource_ylsrh"]
+script = ExtResource("5_1fpnw")
+time_start = 210
+time_end = 240
+enemy = ExtResource("6_suc4c")
+enemy_number = 2
+enemy_spawn_delay = null
+
+[sub_resource type="Resource" id="Resource_itr5w"]
+script = ExtResource("5_1fpnw")
+time_start = 240
+time_end = 270
+enemy = ExtResource("7_q7gaq")
+enemy_number = 3
+enemy_spawn_delay = 2.0
+
+[sub_resource type="Resource" id="Resource_8hurr"]
+script = ExtResource("5_1fpnw")
+time_start = 240
+time_end = 240
+enemy = ExtResource("8_6b0i3")
+enemy_number = 1
+enemy_spawn_delay = null
+
+[sub_resource type="Resource" id="Resource_bby5c"]
+script = ExtResource("5_1fpnw")
+time_start = 270
+time_end = 300
+enemy = ExtResource("6_suc4c")
+enemy_number = 4
+enemy_spawn_delay = null
+
+[sub_resource type="Resource" id="Resource_3savt"]
+script = ExtResource("5_1fpnw")
+time_start = 300
+time_end = 300
+enemy = ExtResource("9_472wi")
+enemy_number = 1
+enemy_spawn_delay = null
+
+[node name="Scene" type="Node2D"]
+script = ExtResource("1_f32j5")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 2
+texture_repeat = 2
+texture = ExtResource("1_o8j5l")
+region_enabled = true
+region_rect = Rect2(-2000, -2000, 2000, 2000)
+
+[node name="Player" parent="." instance=ExtResource("2_15mym")]
+
+[node name="Enemy_spawner" parent="." instance=ExtResource("3_kdoq3")]
+spawns = Array[ExtResource("5_1fpnw")]([SubResource("Resource_3md2h"), SubResource("Resource_7bl3d"), SubResource("Resource_h33tw"), SubResource("Resource_8nqwx"), SubResource("Resource_l56mg"), SubResource("Resource_ylsrh"), SubResource("Resource_itr5w"), SubResource("Resource_8hurr"), SubResource("Resource_bby5c"), SubResource("Resource_3savt")])
+
+[node name="Loot" type="Node2D" parent="." groups=["loot"]]
+
+[node name="snd_Music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("10_aqvqc")
+volume_db = -15.0
+autoplay = true
+script = ExtResource("11_bquoj")

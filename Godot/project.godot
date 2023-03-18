@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Survivors Clone"
-run/main_scene="res://Scenes/Scene01_IntroMenu.tscn"
+run/main_scene="res://Scenes/Scenes/Scene01_IntroMenu.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://Art/Textures/icon.svg"
 
 [autoload]
 
-UpgradeDb="*res://Prefabs/Utility/upgrade_db.tscn"
+UpgradeDb="*res://_Prefabs/Utility/upgrade_db.tscn"
 
 [display]
 

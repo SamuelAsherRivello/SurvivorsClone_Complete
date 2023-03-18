@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpwtookpsjygk"]
-
-[ext_resource type="Script" path="res://Prefabs/Utility/upgrade_db.gd" id="1_h8aw3"]
-
-[node name="UpgradeDB" type="Node"]
-script = ExtResource("1_h8aw3")
