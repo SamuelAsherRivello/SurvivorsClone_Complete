@@ -2,20 +2,13 @@
 
 # Godot Vampire Survivors Clone
 
-- [How To Use](#how-to-use)
-- [Install](#install)
+This is a demo game for educational use while learning the Godot game engine.
 
-
-<!-- toc -->
-
-## How to use
-
-This is a demo game for educational use while learning the [Godot](https://godotengine.org/) game engine.
-
-## Install
-
-Tbd...
-
+**Getting Started**
+1. Download this repo (*.zip or *.git)
+1. Download the [Godot](https://godotengine.org/) game engine
+1. Open the (`./Godot/`) folder in the repo within the Godot Engine 
+1. Enjoy
 
 
 Created By
@@ -36,12 +29,4 @@ Contact
 - Resume & Portfolio - <a href="http://www.SamuelAsherRivello.com">SamuelAsherRivello.com</a>
 - Source Code on Git - <a href="https://github.com/SamuelAsherRivello/">Github.com/SamuelAsherRivello</a>
 - LinkedIn - <a href="https://Linkedin.com/in/SamuelAsherRivello">Linkedin.com/in/SamuelAsherRivello</a> <--- Say Hello! :)
-
-License
-=============
-
-Provided as-is under MIT License | Copyright © 2023 Rivello Multimedia Consulting, LLC
-
-
-
 
