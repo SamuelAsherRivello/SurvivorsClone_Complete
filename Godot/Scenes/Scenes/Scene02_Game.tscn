@@ -1,15 +1,15 @@
-[gd_scene load_steps=23 format=3 uid="uid://d2fu2lot8saii"]
+[gd_scene load_steps=23 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Scenes/Scene02_Game.gd" id="1_f32j5"]
 [ext_resource type="Texture2D" uid="uid://bfdbcrpp4xqvr" path="res://Art/Textures/dirt_full_new.png" id="1_o8j5l"]
-[ext_resource type="PackedScene" path="res://_Prefabs/Player/player.tscn" id="2_15mym"]
-[ext_resource type="PackedScene" path="res://_Prefabs/Utility/enemy_spawner.tscn" id="3_kdoq3"]
-[ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_kolbold_weak.tscn" id="4_1l5f2"]
+[ext_resource type="PackedScene" path="res://Scenes/Player/Player.tscn" id="2_15mym"]
+[ext_resource type="PackedScene" uid="uid://bf1nwp7y2bigu" path="res://Scenes/Systems/EnemySpawnSystem.tscn" id="3_kdoq3"]
+[ext_resource type="PackedScene" uid="uid://dumikqi6if2xi" path="res://_Prefabs/Enemies/enemy_kolbold_weak.tscn" id="4_1l5f2"]
 [ext_resource type="Script" path="res://_Prefabs/Utility/spawn.gd" id="5_1fpnw"]
 [ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_kolbold_strong.tscn" id="6_suc4c"]
-[ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_cyclops.tscn" id="7_q7gaq"]
+[ext_resource type="PackedScene" uid="uid://dlfppsktmfmps" path="res://_Prefabs/Enemies/enemy_cyclops.tscn" id="7_q7gaq"]
 [ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_juggernaut.tscn" id="8_6b0i3"]
-[ext_resource type="PackedScene" path="res://_Prefabs/Enemies/enemy_super.tscn" id="9_472wi"]
+[ext_resource type="PackedScene" uid="uid://c17lvcr5vm67p" path="res://_Prefabs/Enemies/enemy_super.tscn" id="9_472wi"]
 [ext_resource type="AudioStream" uid="uid://mnixawxbbkjj" path="res://Art/Audio/Music/battleThemeA.mp3" id="10_aqvqc"]
 [ext_resource type="Script" path="res://Art/Audio/Music/snd_Music.gd" id="11_bquoj"]
 
@@ -105,7 +105,7 @@ region_rect = Rect2(-2000, -2000, 2000, 2000)
 
 [node name="Player" parent="." instance=ExtResource("2_15mym")]
 
-[node name="Enemy_spawner" parent="." instance=ExtResource("3_kdoq3")]
+[node name="EnemySpawnSystem" parent="." instance=ExtResource("3_kdoq3")]
 spawns = Array[ExtResource("5_1fpnw")]([SubResource("Resource_3md2h"), SubResource("Resource_7bl3d"), SubResource("Resource_h33tw"), SubResource("Resource_8nqwx"), SubResource("Resource_l56mg"), SubResource("Resource_ylsrh"), SubResource("Resource_itr5w"), SubResource("Resource_8hurr"), SubResource("Resource_bby5c"), SubResource("Resource_3savt")])
 
 [node name="Loot" type="Node2D" parent="." groups=["loot"]]

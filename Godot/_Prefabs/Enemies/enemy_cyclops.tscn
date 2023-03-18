@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=12 format=3 uid="uid://dlfppsktmfmps"]
 
 [ext_resource type="Script" path="res://_Prefabs/Enemies/enemy_kolbold_weak.gd" id="1_opvxm"]
 [ext_resource type="Texture2D" uid="uid://celkdrn2gxi6j" path="res://Art/Textures/Enemy/cyclops.png" id="2_44ex2"]
 [ext_resource type="PackedScene" path="res://_Prefabs/Utility/hitbox.tscn" id="3_hyyip"]
-[ext_resource type="PackedScene" uid="uid://dwoelll6cgtyt" path="res://_Prefabs/Utility/hurtbox.tscn" id="4_kqdds"]
+[ext_resource type="PackedScene" path="res://_Prefabs/Utility/hurtbox.tscn" id="4_kqdds"]
 [ext_resource type="AudioStream" uid="uid://cr46aeoovjdg" path="res://Art/Audio/SoundEffect/enemy_hit.ogg" id="5_ant5c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2qp64"]

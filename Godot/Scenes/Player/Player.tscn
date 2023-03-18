@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3]
+[gd_scene load_steps=19 format=3 uid="uid://dblb6yfk3fwgw"]
 
-[ext_resource type="Script" path="res://_Prefabs/Player/player.gd" id="1_71can"]
+[ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="1_ymgvo"]
 [ext_resource type="Texture2D" uid="uid://b0atek3sapb1u" path="res://Art/Textures/Player/player_sprite.png" id="2_njd5a"]
 [ext_resource type="PackedScene" path="res://_Prefabs/Utility/hitbox.tscn" id="3_px1x7"]
 [ext_resource type="Texture2D" uid="uid://66bd8op3i1k4" path="res://Art/Textures/GUI/exp_background.png" id="4_ak4yo"]
@@ -34,7 +34,7 @@ bg_color = Color(0.290196, 0.290196, 0.290196, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
-script = ExtResource("1_71can")
+script = ExtResource("1_ymgvo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_njd5a")
@@ -244,6 +244,5 @@ columns = 10
 [connection signal="body_exited" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_body_exited"]
 [connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
 [connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]
-[connection signal="click_end" from="GUILayer/GUI/DeathPanel/btn_menu" to="." method="_on_button_click_end"]
 
 [editable path="Hitbox"]

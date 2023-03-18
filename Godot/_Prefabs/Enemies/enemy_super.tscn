@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=12 format=3 uid="uid://c17lvcr5vm67p"]
 
 [ext_resource type="Script" path="res://_Prefabs/Enemies/enemy_kolbold_weak.gd" id="1_xno64"]
 [ext_resource type="Texture2D" uid="uid://dhi765ekm34ba" path="res://Art/Textures/Enemy/giant_amoeba_new.png" id="2_l5iro"]
 [ext_resource type="PackedScene" path="res://_Prefabs/Utility/hitbox.tscn" id="3_8p0y7"]
-[ext_resource type="PackedScene" uid="uid://dwoelll6cgtyt" path="res://_Prefabs/Utility/hurtbox.tscn" id="4_d4v2w"]
+[ext_resource type="PackedScene" path="res://_Prefabs/Utility/hurtbox.tscn" id="4_d4v2w"]
 [ext_resource type="AudioStream" uid="uid://cr46aeoovjdg" path="res://Art/Audio/SoundEffect/enemy_hit.ogg" id="5_4p208"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2qp64"]
