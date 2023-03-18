@@ -55,16 +55,19 @@ var javelin_level = 0
 #Enemy Related
 var enemy_close = []
 
+#Fixed
+@onready var experienceBar = $GameHUD/GUI/MarginContainer/VBoxContainer/ExperienceBar
+@onready var collectedWeapons = $GameHUD/GUI/MarginContainer/VBoxContainer/CollectedWeapons
+@onready var collectedUpgrades = $GameHUD/GUI/MarginContainer/VBoxContainer/CollectedUpgrades
+@onready var healthBar = $GameHUD/GUI/MarginContainer/VBoxContainer/HBoxContainer/HealthBar
+@onready var labelLevel = $GameHUD/GUI/MarginContainer/VBoxContainer/HBoxContainer/LevelLabel
+@onready var lblTime = $GameHUD/GUI/MarginContainer/VBoxContainer/HBoxContainer/TimerLabel
+@onready var upgradeOptions = $GameHUD/GUI/LevelUp/UpgradeOptions
+@onready var levelUpContainer = $GameHUD/GUI/LevelUp
+@onready var sndLevelUp = $GameHUD/GUI/LevelUp/snd_levelup
+
 #GUI Elements
-@onready var experienceBar = $GUILayer/GUI/ExperienceBar
-@onready var labelLevel = $GUILayer/GUI/lbl_level
-@onready var upgradeOptions = $GUILayer/GUI/LevelUp/UpgradeOptions
-@onready var levelUpContainer = $GUILayer/GUI/LevelUp
 @onready var itemOption = preload("res://_Prefabs/Utility/item_option.tscn")
-@onready var healthBar = $GUILayer/GUI/HealthBar
-@onready var lblTime = $GUILayer/GUI/lbl_timer
-@onready var collectedWeapons = $GUILayer/GUI/CollectedWeapons
-@onready var collectedUpgrades = $GUILayer/GUI/CollectedUpgrades
 @onready var collectedItems = preload("res://Scenes/UI/ItemContainer.tscn")
 @onready var deathPanel = get_node("%DeathPanel")
 @onready var lblResult = get_node("%lbl_Result")
@@ -73,7 +76,7 @@ var enemy_close = []
 
 
 #Sounds
-@onready var sndLevelUp = $GUILayer/GUI/LevelUp/snd_levelup
+
 
 
 #Signals
