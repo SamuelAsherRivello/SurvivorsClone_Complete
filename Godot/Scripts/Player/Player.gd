@@ -70,6 +70,8 @@ var enemy_close = []
 @onready var itemOption = preload("res://_Prefabs/Utility/item_option.tscn")
 @onready var collectedItems = preload("res://Scenes/UI/ItemContainer.tscn")
 @onready var deathPanel = NodeUtilityAutoload.FindNodeFromRoot(self, "DeathPanel") 
+@onready var btn_menu = NodeUtilityAutoload.FindNodeFromRoot(self, "btn_menu") 
+
 @onready var lblResult = NodeUtilityAutoload.FindNodeFromRoot(self, "lbl_Result") 
 @onready var sndVictory = NodeUtilityAutoload.FindNodeFromRoot(self, "snd_victory")
 @onready var sndLose = NodeUtilityAutoload.FindNodeFromRoot(self, "snd_lose") 
@@ -84,6 +86,7 @@ signal playerdeath()
 
 func _ready():
 
+	btn_menu.connect("OnButtonClicked", GameOver_OnButtonClicked )
 	attack()
 	set_expbar(experience, calculate_experiencecap())
 	_on_hitbox_hurt(0,0,0)
@@ -381,7 +384,8 @@ func change_time(argtime = 0):
 	lblTime.text = string
 	
 
-func _on_button_click_end():
+func GameOver_OnButtonClicked():
+	print ("click")
 	get_tree().paused = false
 	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")
 
