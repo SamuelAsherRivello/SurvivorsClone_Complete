@@ -69,10 +69,10 @@ var enemy_close = []
 #GUI Elements
 @onready var itemOption = preload("res://_Prefabs/Utility/item_option.tscn")
 @onready var collectedItems = preload("res://Scenes/UI/ItemContainer.tscn")
-@onready var deathPanel = get_node("%DeathPanel")
-@onready var lblResult = get_node("%lbl_Result")
-@onready var sndVictory = get_node("%snd_victory")
-@onready var sndLose = get_node("%snd_lose")
+@onready var deathPanel = NodeUtilityAutoload.FindNodeFromRoot(self, "DeathPanel") 
+@onready var lblResult = NodeUtilityAutoload.FindNodeFromRoot(self, "lbl_Result") 
+@onready var sndVictory = NodeUtilityAutoload.FindNodeFromRoot(self, "snd_victory")
+@onready var sndLose = NodeUtilityAutoload.FindNodeFromRoot(self, "snd_lose") 
 
 
 #Sounds
