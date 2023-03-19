@@ -17,10 +17,10 @@ func _ready():
 	connect("selected_upgrade",Callable(player,"upgrade_character"))
 	if item == null:
 		item = "food"
-	lbl_name.text = UpgradeDb.UPGRADES[item]["displayname"]
-	lbl_desription.text = UpgradeDb.UPGRADES[item]["details"]
-	lbl_level.text = UpgradeDb.UPGRADES[item]["level"]
-	itemIcon.texture = load(UpgradeDb.UPGRADES[item]["icon"])
+	lbl_name.text = UpgradeDBAutoload.UPGRADES[item]["displayname"]
+	lbl_desription.text = UpgradeDBAutoload.UPGRADES[item]["details"]
+	lbl_level.text = UpgradeDBAutoload.UPGRADES[item]["level"]
+	itemIcon.texture = load(UpgradeDBAutoload.UPGRADES[item]["icon"])
 
 func _on_mouse_entered():
 	mouse_over = true

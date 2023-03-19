@@ -56,15 +56,15 @@ var javelin_level = 0
 var enemy_close = []
 
 #Fixed
-@onready var experienceBar = $GameHUD/GUI/MarginContainer/VBoxContainer/ExperienceBar
-@onready var collectedWeapons = $GameHUD/GUI/MarginContainer/VBoxContainer/CollectedWeapons
-@onready var collectedUpgrades = $GameHUD/GUI/MarginContainer/VBoxContainer/CollectedUpgrades
-@onready var healthBar = $GameHUD/GUI/MarginContainer/VBoxContainer/HBoxContainer/HealthBar
-@onready var labelLevel = $GameHUD/GUI/MarginContainer/VBoxContainer/HBoxContainer/LevelLabel
-@onready var lblTime = $GameHUD/GUI/MarginContainer/VBoxContainer/HBoxContainer/TimerLabel
-@onready var upgradeOptions = $GameHUD/GUI/LevelUp/UpgradeOptions
-@onready var levelUpContainer = $GameHUD/GUI/LevelUp
-@onready var sndLevelUp = $GameHUD/GUI/LevelUp/snd_levelup
+@onready var experienceBar = NodeUtilityAutoload.FindNodeFromRoot(self, "ExperienceBar")
+@onready var collectedWeapons = NodeUtilityAutoload.FindNodeFromRoot(self, "CollectedWeapons") 
+@onready var collectedUpgrades = NodeUtilityAutoload.FindNodeFromRoot(self, "CollectedUpgrades") 
+@onready var healthBar = NodeUtilityAutoload.FindNodeFromRoot(self, "HealthBar") 
+@onready var labelLevel = NodeUtilityAutoload.FindNodeFromRoot(self, "LevelLabel") 
+@onready var lblTime = NodeUtilityAutoload.FindNodeFromRoot(self, "TimerLabel") 
+@onready var upgradeOptions = NodeUtilityAutoload.FindNodeFromRoot(self, "UpgradeOptions") 
+@onready var levelUpContainer = NodeUtilityAutoload.FindNodeFromRoot(self, "LevelUp") 
+@onready var sndLevelUp = NodeUtilityAutoload.FindNodeFromRoot(self, "snd_levelup")
 
 #GUI Elements
 @onready var itemOption = preload("res://_Prefabs/Utility/item_option.tscn")
@@ -83,6 +83,7 @@ var enemy_close = []
 signal playerdeath()
 
 func _ready():
+
 	attack()
 	set_expbar(experience, calculate_experiencecap())
 	_on_hitbox_hurt(0,0,0)
@@ -312,15 +313,15 @@ func upgrade_character(upgrade):
 	
 func get_random_item():
 	var dblist = []
-	for i in UpgradeDb.UPGRADES:
+	for i in UpgradeDBAutoload.UPGRADES:
 		if i in collected_upgrades: #Find already collected upgrades
 			pass
 		elif i in upgrade_options: #If the upgrade is already an option
 			pass
-		elif UpgradeDb.UPGRADES[i]["type"] == "item": #Don't pick food
+		elif UpgradeDBAutoload.UPGRADES[i]["type"] == "item": #Don't pick food
 			pass
-		elif UpgradeDb.UPGRADES[i]["prerequisite"].size() > 0: #Check for PreRequisites
-			for n in UpgradeDb.UPGRADES[i]["prerequisite"]:
+		elif UpgradeDBAutoload.UPGRADES[i]["prerequisite"].size() > 0: #Check for PreRequisites
+			for n in UpgradeDBAutoload.UPGRADES[i]["prerequisite"]:
 				if not n in collected_upgrades:
 					pass
 				else:
@@ -335,12 +336,12 @@ func get_random_item():
 		return null
 
 func adjust_gui_collection(upgrade):
-	var get_upgraded_displaynames = UpgradeDb.UPGRADES[upgrade]["displayname"]
-	var get_type = UpgradeDb.UPGRADES[upgrade]["type"]
+	var get_upgraded_displaynames = UpgradeDBAutoload.UPGRADES[upgrade]["displayname"]
+	var get_type = UpgradeDBAutoload.UPGRADES[upgrade]["type"]
 	if get_type != "item":
 		var get_collected_displaynames = []
 		for i in collected_upgrades:
-			get_collected_displaynames.append(UpgradeDb.UPGRADES[i]["displayname"])
+			get_collected_displaynames.append(UpgradeDBAutoload.UPGRADES[i]["displayname"])
 		if not get_upgraded_displaynames in get_collected_displaynames:
 			var new_item = collectedItems.instantiate()
 			new_item.upgrade = upgrade

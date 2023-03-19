@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxkqfqcnj2d56"]
+
+[ext_resource type="Script" path="res://Scripts/Autoloads/UpgradeDBAutoload.gd" id="1_ee1b5"]
+
+[node name="UpgradeDB" type="Node"]
+script = ExtResource("1_ee1b5")
